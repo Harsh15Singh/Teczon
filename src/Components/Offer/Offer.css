@@ -1,0 +1,139 @@
+.products{
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product img{
+  /* display: none; */
+    height: 180px;
+    width: 350px;
+    border-radius: 10px; 
+    align-items: center;
+    align-content: center;
+    display:block;
+
+}
+.card {
+    position: relative;
+    width: 360px;
+    height: 460px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  }
+  
+  .bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 350px;
+    height: 450px;
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow:visible;
+    outline: 2px solid white;
+  }
+  
+  .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+  }
+  
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+  
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+  
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  }
+  .bg p{
+    margin: 8px ;
+    display: inline-block; 
+    justify-content: flex-start;
+  }
+  .bg h3{
+      margin: 20px;
+      text-align: center;
+      justify-content: space-between;
+  }
+
+  @media (max-width:850px) {
+    .product img{
+      display: none;
+    }
+    .card {
+      width: 300px;
+      height: 360px;
+      position: relative;
+      border-radius: 14px;
+      z-index: 1111;
+      overflow:hidden;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    }
+    .bg{
+      width: 290px;
+    height: 350px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow:visible;
+    outline: 2px solid white;
+     
+    }
+    .blob{
+      width: 250px;
+    height: 310px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #ff2200;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+    }
+    
+  }
+  
